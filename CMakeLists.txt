@@ -1,0 +1,6 @@
+PROJECT(chat)
+SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
+ADD_EXECUTABLE(client chat_client.c)
+ADD_EXECUTABLE(server chat_server.c)
+TARGET_LINK_LIBRARIES(client pthread)
+TARGET_LINK_LIBRARIES(server pthread)
